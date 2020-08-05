@@ -81,7 +81,8 @@ def move_file(owner_dict, src_path, dst_path, catlog_number, misc_path):
                         file_src_path = os.path.join(src_path, av["file"])
                         file_dst_path = os.path.join(owner_path, av["file"])
                         print("\t"+av["file"])
-                        os.rename(file_src_path, file_dst_path)
+                        if file_src_path != file_dst_path:
+	                        os.rename(file_src_path, file_dst_path)
                     except Exception as e:
                         print(av,"got Exception",str(e))
                 print("\n")
