@@ -98,7 +98,6 @@ if __name__ == '__main__':
     parser.add_argument('-c', help="use json cache, skip fetch from bilibili", action='store_true')
     args = parser.parse_args()
 
-    # show_path = "/mnt/show/宅舞/"
     src_path = args.video_path
     dst_path = args.catlog_path
     if os.path.exists(src_path) == False:
